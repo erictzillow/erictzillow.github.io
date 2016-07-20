@@ -6,14 +6,22 @@ body {
     color: #526066;
 }
 
+h1{
+    font-weight: 100;
+    font-size:2.25em;
+    -webkit-margin-after: 0em;
+}
+
 h2, h3 {
     /*letter-spacing: 0.25em;*/
 /*    text-transform: uppercase;*/
     font-weight: 300;
+    -webkit-margin-after: 0em;
 }
 
 p {
     line-height: 1.6em;
+    font-weight: 100;
 }
 
 
@@ -85,6 +93,15 @@ p {
     padding: 10px 20px 35px 30px;
  }
 
+.emailblock{
+    margin-top:0px;
+    display: inline-block;
+}
+.upsell{
+    margin:8px 0px 12px 0px;
+    display: inline-block;
+    font-weight: 600;
+}
 
 /* Bullet point section */
 
@@ -117,6 +134,44 @@ p {
         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/lockshot.png', sizingMethod='scale');
     }
 
+.ghostform{
+    border:1px solid white;
+    border-radius: 2px;
+    background:transparent no-repeat;
+    height:2.2em;
+    min-width: 320px;
+    padding:.2em .2em .2em .4em;
+    outline: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
+        ::-webkit-input-placeholder {
+           color: rgba(255,255,255,.5);
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+           color: rgba(255,255,255,.5);  
+        }
+
+        ::-moz-placeholder {  /* Firefox 19+ */
+           color: rgba(255,255,255,.5);  
+        }
+
+        :-ms-input-placeholder {  
+           color: rgba(255,255,255,.5);  
+        }
+
+
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            box-shadow: 0 0 6px rgba(255, 255, 255, 1);
+            border:1px solid white;
+        }
 
 
 .button-choose {
