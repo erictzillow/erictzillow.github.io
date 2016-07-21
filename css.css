@@ -44,13 +44,12 @@ p {
  */
 
 .banner {
-    background: transparent url('./assets/Smart_Lock_wood.png') center center no-repeat;
+    background: transparent url('./assets/HeaderMobile.jpg') center center no-repeat;
     text-align: left;
     background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/Smart_Lock_wood.png', sizingMethod='scale');
-
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/HeaderMobile.jpg', sizingMethod='scale');
     width: 100%;
-    display: table;
+    /*display: table;*/
 }
 
     .logo{
@@ -63,10 +62,10 @@ p {
     }
 
 .banner2 {
-    background: transparent url('./assets/hero_pet.png') center center no-repeat;
+    background: transparent url('./assets/Pet.jpg') center center no-repeat;
     text-align: left;
     background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/hero_pet.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/Pet.jpg', sizingMethod='scale');
     margin-top: 2em;
     height: 568px;
     width: 100%;
@@ -74,10 +73,10 @@ p {
 }
 
 .banner3 {
-    background: transparent url('./assets/hero_tourreq.png') center center no-repeat;
+    background: transparent url('./assets/Applicant.jpg') center center no-repeat;
     text-align: left;
     background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/hero_tourreq.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/Applicant.jpg', sizingMethod='scale');
     margin-top: 2em;
     height: 568px;
     width: 100%;
@@ -85,10 +84,10 @@ p {
 }
 
 .banner4 {
-    background: transparent url('./assets/hero_maint.png') center center no-repeat;
+    background: transparent url('./assets/Maintenance.jpg') center center no-repeat;
     text-align: left;
     background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/hero_maint.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/Maintenance.jpg', sizingMethod='scale');
     margin-top: 2em;
     height: 568px;
     width: 100%;
@@ -194,19 +193,36 @@ p {
         background:rgb(81, 128, 53);
     }
 
-.ghostform{
+.ghost{
     border:1px solid white;
     border-radius: 2px;
     background:transparent no-repeat;
     height:2.2em;
-    min-width: 320px;
-    padding:.2em .2em .2em .4em;
     outline: none;
-    -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.20s ease-in-out;
+    -moz-transition: all 0.20s ease-in-out;
+    -ms-transition: all 0.20s ease-in-out;
+    -o-transition: all 0.20s ease-in-out;
+}
 
+.ghostform{
+    padding:.2em .2em .2em .4em;
+    min-width: 260px;   
+}
+.ghostbutton{
+    padding:.7em .7em 1.9em .7em;
+}
+.ghostbutton:hover{
+    background-color:white;
+    color:black;
+}
+.error{
+    font-size: 14px;
+    background-color:red;
+    color:white;
+    padding:8px;
+    display:none;
+    margin-top: 5px;
 }
 
         ::-webkit-input-placeholder {
@@ -275,8 +291,12 @@ p {
         font-size:2.25em !important;
     }
     .banner {
+        background: transparent url('./assets/HeaderDesktop.jpg') center center no-repeat !important;
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/HeaderDesktop.jpg', sizingMethod='scale') !important;
         height: 568px !important;
+        background-size:cover!important;
     }
+
     .picinfo{
         margin-top: 120px !important;
         padding: 10px 20px 35px 30px !important;
