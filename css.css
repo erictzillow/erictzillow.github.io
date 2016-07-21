@@ -8,13 +8,11 @@ body {
 
 h1{
     font-weight: 100;
-    font-size:2.25em;
+    font-size:1.8em;
     -webkit-margin-after: 0em;
 }
 
 h2, h3 {
-    /*letter-spacing: 0.25em;*/
-/*    text-transform: uppercase;*/
     font-weight: 300;
     -webkit-margin-after: 0em;
 }
@@ -36,13 +34,6 @@ p {
     padding: 0.5em 2em;
 }
 
-/*
- * -- MENU STYLES --
- * Make the menu have a very faint box-shadow.
- */
-.pure-menu {
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
-}
 
 
 /*
@@ -58,32 +49,51 @@ p {
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/Smart_Lock_wood.png', sizingMethod='scale');
 
-    height: 568px;
     width: 100%;
     display: table;
 }
 
     .logo{
-        display: inline;
-        position: absolute;
-        margin: 15px 0px 0px;
+        display: inline-block;
+        position: relative;
+        margin: 30px auto;
         width: 200px;
         height: 53px;
         background: transparent url('./assets/logo.png') 0 0 no-repeat;
     }
 
 .banner2 {
-    background: transparent url('./assets/pet_detected.png') center center no-repeat;
+    background: transparent url('./assets/hero_pet.png') center center no-repeat;
     text-align: left;
     background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/Smart_Lock_wood.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/hero_pet.png', sizingMethod='scale');
     margin-top: 2em;
     height: 568px;
     width: 100%;
     display: table;
 }
 
+.banner3 {
+    background: transparent url('./assets/hero_tourreq.png') center center no-repeat;
+    text-align: left;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/hero_tourreq.png', sizingMethod='scale');
+    margin-top: 2em;
+    height: 568px;
+    width: 100%;
+    display: table;
+}
 
+.banner4 {
+    background: transparent url('./assets/hero_maint.png') center center no-repeat;
+    text-align: left;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/hero_maint.png', sizingMethod='scale');
+    margin-top: 2em;
+    height: 568px;
+    width: 100%;
+    display: table;
+}
 /*
  * -- PRICING TABLE WRAPPER --
  * This element wraps up all the pricing table elements
@@ -95,11 +105,12 @@ p {
     margin: 0 auto;
  }
 
- .picinfo{
+.picinfo{
     background-color: rgba(0,0,0,.3);
     color: white;
-    margin-top: 120px;
-    padding: 10px 20px 35px 30px;
+    margin-top: 0px;
+    padding: 10px 10px 20px 10px;
+    bottom:0px;
  }
 
 .emailblock{
@@ -123,10 +134,10 @@ p {
     .bulletfloat{
         margin:.75em;
     }
-
-        .shiftbulletsup{
-            margin-bottom:-160px;
-        }
+/*
+    .shiftbulletsup{
+        margin-bottom:-160px;
+    }*/
 
 
     .icon{
@@ -137,10 +148,14 @@ p {
         font-size: 14px
     }
 
-    .bulletblock {
+/*    .bulletblock {
         background: transparent url('./assets/lockshot.png') center center no-repeat;
         background-size: 30%;
         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/lockshot.png', sizingMethod='scale');
+    }*/
+
+    .empty{
+        display:none;
     }
 
 .buycta{
@@ -148,6 +163,7 @@ p {
     border-top:1px solid #979797;
     border-bottom:1px solid #979797;
     margin-bottom: 2em;
+    padding-bottom:20px;
 }
 
     .buycta span, .buycta h3{
@@ -170,7 +186,8 @@ p {
         border-radius: 2px;
         font-weight:100;
         cursor: pointer;
-        margin: 0px 0px 12px 11px;
+        margin: 10px 0px 0px 11px;
+        display:none !important;
     }
 
     .buttongreen:hover{
@@ -189,6 +206,7 @@ p {
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
+
 }
 
         ::-webkit-input-placeholder {
@@ -248,15 +266,44 @@ p {
  * On tablets, we want to slightly adjust the size of the banner
  * text and add some vertical space between the various pricing tables
  */
+
+
+
 @media(min-width: 767px) {
 
-    .banner-head {
-        font-size: 4em;
+    h1{
+        font-size:2.25em !important;
     }
-    .pricing-table {
-        margin-bottom: 0;
+    .banner {
+        height: 568px !important;
     }
-
+    .picinfo{
+        margin-top: 120px !important;
+        padding: 10px 20px 35px 30px !important;
+     }
+    .logo{
+        display: inline !important;
+        position: absolute !important;
+        margin: 15px 0px 0px !important;
+    }
+    .empty{
+        display:inline-block !important;
+    }
+    .shiftbulletsup{
+        margin-bottom: -160px !important;
+    }
+    .bulletblock {
+        background: transparent url('./assets/lockshot.png') center center no-repeat !important;
+        background-size: 30% !important;
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/lockshot.png', sizingMethod='scale');
+    }
+    .buycta{
+        padding-bottom:10px !important;
+    }
+    .buttongreen{
+        margin: 0px 0px 0px 11px !important;
+        display:inline-block !important;
+    }
 }
 
 /*
@@ -264,10 +311,34 @@ p {
  * On phones, we want to reduce the height and font-size of the banner further
  */
 @media (min-width: 480px) {
-    .banner {
-        height: 568px;
+
+    .picinfo{
+        background-color: rgba(0,0,0,.3);
+        color: white;
+        margin-top: 0px;
+        padding: 10px 20px 35px 30px;
+     }
+
+    .logo{
+        display: inline-block;
+        position: relative;
+        margin: 30px auto;
     }
-    .banner-head {
-        font-size: 3em;
+
+    .empty{
+        display:none;
+    }
+    .shiftbulletsup{
+        margin-bottom: 0px;
+    }
+
+    .bulletblock {
+        background: none; /*transparent url('./assets/lockshot.png') top center no-repeat;*/
+        background-size: 60%;
+        /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/lockshot.png', sizingMethod='scale');*/
+    }
+    .ghostform{
+        min-width: 300px;
+        padding:.2em 0em .2em .4em;
     }
 }
