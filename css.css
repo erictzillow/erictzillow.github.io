@@ -7,8 +7,8 @@ body {
 }
 
 h1{
-    font-weight: 100;
-    font-size:1.8em;
+    font-weight: 600;
+    font-size:2em;
     -webkit-margin-after: 0em;
 }
 
@@ -44,21 +44,23 @@ p {
  */
 
 .banner {
-    background: transparent url('./assets/HeaderMobile.jpg') center center no-repeat;
-    text-align: left;
+    background: transparent url('./assets/HeaderMobile.jpg') center 0px no-repeat;
+    text-align: center;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/HeaderMobile.jpg', sizingMethod='scale');
     width: 100%;
-    /*display: table;*/
+    position:relative;
+    height: 620px;
 }
 
     .logo{
         display: inline-block;
         position: relative;
-        margin: 30px auto;
+        margin: 10px auto;
         width: 200px;
         height: 53px;
-        background: transparent url('./assets/logo.png') 0 0 no-repeat;
+        background: transparent url('./assets/logo.png') center 0px no-repeat;
+        background-size: 70%;
     }
 
 .banner2 {
@@ -111,10 +113,30 @@ p {
     padding: 10px 10px 20px 10px;
     bottom:0px;
  }
+ .headermessage{
+    color: black;
+    margin-top: 156px;
+    padding: 10px 10px 20px 10px;
+    bottom:0px;
+ }
+ .subhead{
+    font-size: 18px;
+    font-weight: 100;
+    display: block;
+    margin-top:10px;
+    line-height: 24px;
+}
+.price{
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-top:15px;
+}
 
 .emailblock{
     margin-top:0px;
     display: inline-block;
+    width:100%;
 }
 .upsell{
     margin:8px 0px 12px 0px;
@@ -127,7 +149,6 @@ p {
     .centerblock{
         text-align: center;
         color:#83A7A5;
-
     }
 
     .bulletfloat{
@@ -158,35 +179,39 @@ p {
     }
 
 .buycta{
-    background:#666666;
-    border-top:1px solid #979797;
-    border-bottom:1px solid #979797;
-    margin-bottom: 2em;
+    background: rgba(0,0,0,.5);
     padding-bottom:20px;
+    position: absolute;
+    bottom:0px;
+    width:100%;
 }
 
-    .buycta span, .buycta h3{
+/*    .buycta span, .buycta h3{
         display:inline-block;
-    }
+    }*/
 
     .buycta h3{
         color:white !important;
         font-weight: 100;
+        margin-bottom:15px;
+        font-size:20px;
     }
 
     .buttongreen{
-        -webkit-transition: all 0.30s ease-in-out;
-        -moz-transition: all 0.30s ease-in-out;
-        -ms-transition: all 0.30s ease-in-out;
-        -o-transition: all 0.30s ease-in-out;
         background:#6FB048;
-        padding:10px 10px 10px 10px;
         color:white;
+        border:1px solid #6FB048;
         border-radius: 2px;
         font-weight:100;
         cursor: pointer;
-        margin: 10px 0px 0px 11px;
-        display:none !important;
+        padding:11px 14px 13px 14px;
+        margin: 10px 0px 0px 0px;
+        outline: none;
+        min-width: 95%;
+        -webkit-transition: all 0.20s ease-in-out;
+        -moz-transition: all 0.20s ease-in-out;
+        -ms-transition: all 0.20s ease-in-out;
+        -o-transition: all 0.20s ease-in-out;
     }
 
     .buttongreen:hover{
@@ -206,16 +231,17 @@ p {
 }
 
 .ghostform{
-    padding:.2em .2em .2em .4em;
-    min-width: 260px;   
+    min-width: 90%;
+    padding:5px 10px 5px 6px;
+    text-align: center;
 }
-.ghostbutton{
+/*.ghostbutton{
     padding:.7em .7em 1.9em .7em;
 }
 .ghostbutton:hover{
     background-color:white;
     color:black;
-}
+}*/
 .error{
     font-size: 14px;
     background-color:red;
@@ -251,16 +277,6 @@ p {
         }
 
 
-.button-choose {
-    border: 1px solid #ccc;
-    background: #fff;
-    color: #333;
-    border-radius: 2em;
-    font-weight: bold;
-    position: relative;
-    bottom: -1.5em;
-}
-
 .information-head {
     color: black;
     font-weight: 500;
@@ -288,15 +304,22 @@ p {
 @media(min-width: 767px) {
 
     h1{
-        font-size:2.25em !important;
+        font-size:3.75em !important;
     }
     .banner {
         background: transparent url('./assets/HeaderDesktop.jpg') center center no-repeat !important;
         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/HeaderDesktop.jpg', sizingMethod='scale') !important;
-        height: 568px !important;
+        height: 620px !important;
         background-size:cover!important;
+        text-align: left !important;
+        margin-bottom:10px;
     }
-
+    .headermessage{
+        margin-top: 120px !important;
+        padding: 10px 20px 35px 30px !important;
+        width: 76% !important;
+    }
+    
     .picinfo{
         margin-top: 120px !important;
         padding: 10px 20px 35px 30px !important;
@@ -318,11 +341,24 @@ p {
         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/lockshot.png', sizingMethod='scale');
     }
     .buycta{
-        padding-bottom:10px !important;
+        padding-bottom:20px !important;
     }
     .buttongreen{
-        margin: 0px 0px 0px 11px !important;
+        margin: 0px 0px 0px 5px !important;
         display:inline-block !important;
+        min-width: 80px !important;
+    }
+    .ghostform{
+        text-align: left !important;
+    }
+     .subhead{
+        font-size: 24px !important;
+        margin-top:10px !important;
+        line-height: 30px !important;
+    }
+    .price{
+        font-size: 24px !important;
+        margin-top:20px !important;
     }
 }
 
