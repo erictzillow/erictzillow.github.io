@@ -264,8 +264,8 @@
                     ga('send', {
                       hitType: 'event',
                       eventCategory: 'Signup',
-                      eventAction: 'Submit',
-                      eventLabel: 'Failed '+ boo
+                      eventAction: 'Failed',
+                      eventLabel: boo
                     });
                 }else{
                     $('.emailblock h3').html('Thanks for registering!');
@@ -275,8 +275,8 @@
                     ga('send', {
                       hitType: 'event',
                       eventCategory: 'Signup',
-                      eventAction: 'Submit',
-                      eventLabel: 'Succeed '+ boo
+                      eventAction: 'Succeed',
+                      eventLabel: boo
                     });
                 }
             });
