@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Curved Images</title>
+    <meta name="description" content="Curved Images - A-Frame">
+    <script src="../../../dist/aframe.js"></script>
+    <script src="../../../dist/aframe-layout-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene >
+      <a-assets>
+        <img id="shadow2" src="../../assets/img/radial-shadow-2.png">
+
+        <img id="ui0" src="Susan_0.png">
+        <img id="ui1" src="Susan_1.png">
+        <img id="ui2" src="Susan_2.png">
+        <img id="ui3" src="Susan_3.png">
+        <img id="ui4" src="Susan_4.png">
+        <img id="ui5" src="Susan_5.png">
+        <img id="ui6" src="Susan_6.png">
+        <img id="ui7" src="Susan_7.png">
+        <img id="ui8" src="Susan_8.png">
+        <img id="ui9" src="Susan_9.png">
+        <img id="ui10" src="Susan_10.png">
+        <img id="ui11" src="Susan_11.png">
+        <img id="ui12" src="Susan_12.png">
+        <img id="ui13" src="Susan_13.png">
+
+      </a-assets>
+
+      <a-entity layout="type: circle; radius: 1" position="0 0 0">
+
+          <a-curvedimage src="#ui0" radius="5.7" theta-length="25" height="4"
+                        rotation="0 160 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui1" radius="5.7" theta-length="25" height="4"
+                        rotation="0 129 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui2" radius="5.7" theta-length="25" height="4"
+                         rotation="0 98 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui3" radius="5.7" theta-length="25" height="4"
+                         rotation="0 67 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui4" radius="5.7" theta-length="25" height="4"
+                         rotation="0 36 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui5" radius="5.7" theta-length="25" height="4"
+                         rotation="0 5 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui6" radius="5.7" theta-length="25" height="4"
+                         rotation="0 -26 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui7" radius="5.7" theta-length="25" height="4"
+                         rotation="0 -57 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui8" radius="5.7" theta-length="25" height="4"
+                         rotation="0 -88 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui9" radius="5.7" theta-length="25" height="4"
+                         rotation="0 -119 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui10" radius="5.7" theta-length="25" height="4"
+                         rotation="0 -26 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui11" radius="5.7" theta-length="25" height="4"
+                         rotation="0 -57 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui12" radius="5.7" theta-length="25" height="4"
+                         rotation="0 -88 0" scale="1 1 1" ></a-curvedimage>
+
+          <a-curvedimage src="#ui13" radius="5.7" theta-length="25" height="4"
+                         rotation="0 -119 0" scale="1 1 1" ></a-curvedimage>
+
+      </a-entity>
+
+
+
+
+      <a-image position="0 -5 0" src="#shadow2" rotation="-90 0 0" scale="6 6 6"></a-image>
+      <a-sky color="#333"></a-sky>
+      <a-entity position="0 0 0">
+        <a-camera look-controls wasd-controls>
+          <a-entity cursor="fuse: true; maxDistance: 5; timeout: 500"
+                    position="0 0 -2"
+                    geometry="primitive: ring"
+                    material="color: red; shader: flat"
+                    scale="0.1 0.1 0.1">
+              <a-animation begin="click" easing="ease-in" attribute="scale"
+                   fill="backwards" from="0.1 0.1 0.1" to="0.09 0.09 0.09"></a-animation>
+              <a-animation begin="fusing" easing="ease-in" attribute="scale" 
+                   fill="forwards" from="0.1 0.1 0.1" to="0.09 0.09 0.09"></a-animation>
+          </a-entity>
+
+        </a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
